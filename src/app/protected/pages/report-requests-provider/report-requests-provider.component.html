@@ -1,0 +1,66 @@
+<div class="panel_main dg_panel_main" style="width: 100%; background-color: #FFFFFF;">
+    
+    <br>
+
+    <div class="container">
+
+        <div class="row styleColHead2">
+            <div [class]="strClassColHead2">
+                <h6 class="mt-2">Reporte de Consultas</h6>
+            </div>
+        </div>
+            
+        <div class="row styleColHead3">
+            <div [class]="strClassColHead3"
+                *ngFor="let cabecera of cabeceraConsultas;">
+                {{cabecera[0]}}
+            </div>
+        </div>
+        
+        <div class="row" style="min-height: 40px;"
+            *ngIf="errorBusqueda||inibusqueda||sinDatosEncontrados">
+
+            <div class="col border d-flex align-items-center justify-content-center">
+
+                <div *ngIf="errorBusqueda" class="d-flex align-items-center justify-content-center">
+                    <i class="fa fa-warning me-2"></i>
+                    <div>
+                    {{messageError}}
+                    </div>
+                </div>
+                <div *ngIf="inibusqueda" class="d-flex align-items-center justify-content-center">
+                    <div class="spinner-border spinner-border-sm me-2" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div>
+                        Buscando Información...
+                    </div>
+                </div>
+                <div *ngIf="sinDatosEncontrados" class="d-flex align-items-center justify-content-center styleCont">
+                    {{msgSinInformacion}}
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="datosEncontrados">
+            <div class="row" style="min-height: 40px;"
+                *ngFor="let requestProvider of requestProviders || []">
+                
+                <div [class]="classColContent_Center">
+                    {{requestProvider.provider}}
+                </div>
+                <div [class]="classColContent_Center">
+                    {{ requestProvider.serviceName }}
+                </div> 
+                <div [class]="classColContent_Center">
+                    {{ requestProvider.requests }}
+                </div>
+                
+               
+            </div>
+        </div>
+
+        <br>        
+    </div>
+
+</div>

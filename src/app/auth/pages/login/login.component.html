@@ -1,0 +1,281 @@
+<!-- <p>login works!</p> -->
+<!-- 
+<form class="login100-form" 
+      autocomplete="on"
+      [formGroup]="miFormulario"
+      (ngSubmit)="login()">
+                
+    <span class="login100-form-title p-b-49">
+        Login
+    </span>
+
+    <div class="wrap-input100 m-b-23">
+        <span class="label-input100">Email</span>
+        <input class="input100"
+               type="email" 
+               formControlName="email" 
+               placeholder="Ingrese su email">
+        <span class="focus-input100"></span>
+    </div>
+
+    <div class="wrap-input100">
+        <span class="label-input100">Password</span>
+        <input class="input100"
+               type="password"
+               formControlName="password" 
+               placeholder="Ingrese su contraseña">
+        <span class="focus-input100"></span>
+    </div>
+    
+    <div class="text-right p-t-8 p-b-31"></div>
+    
+    <div class="container-login100-form-btn">
+        <div class="wrap-login100-form-btn">
+            <div class="login100-form-bgbtn"></div>
+            <button class="login100-form-btn" type="submit" [disabled]="miFormulario.invalid">
+                Login
+            </button>
+        </div>
+    </div>
+
+    <div class="flex-col-c p-t-60">
+        <span class="txt1 p-b-17">
+            ¿No tienes cuenta?
+        </span>
+
+        <a routerLink="/auth/registro" class="txt2">
+            Crea una aquí
+        </a>
+    </div>
+</form> -->
+
+
+<!-- <div class="bg-light min-vh-100 d-flex flex-row align-items-center">
+    <c-container>
+      <c-row class="justify-content-center">
+        <c-col xs="11" sm="11" md="8" lg="7" xl="6" xxl="5">
+
+          <c-card class="p-4">
+            <c-card-body>
+
+              <form 
+                cForm
+                [formGroup]="miFormulario"
+                (ngSubmit)="login()">
+                
+                <h3>Sistema de Gestión de Pruebas de Confianza</h3>
+                <div style="margin-right: auto; margin-left: auto; width: 200px;">
+                  <img cImg rounded src="assets/images/logo_jnj.png" thumbnail width="200" />
+                </div>
+                <hr>
+                <p class="text-medium-emphasis">Ingrese sus credenciales de usuario</p>
+
+                <c-input-group class="mb-3">
+                    <span cInputGroupText>
+                      <svg cIcon name="cilUser"></svg>
+                    </span>
+                  <input 
+                    autoComplete="username"
+                    cFormControl
+                    placeholder="Nombre de Usuario"
+                    formControlName="username"
+                   />
+                </c-input-group>
+                
+                <c-input-group class="mb-4">
+                    <span cInputGroupText>
+                      <svg cIcon name="cilLockLocked"></svg>
+                    </span>
+                  <input
+                    autoComplete="current-password"
+                    cFormControl
+                    placeholder="Contraseña"
+                    type="password"
+                    formControlName="password"
+                  />
+                </c-input-group>
+
+                
+
+                <c-row *ngIf="iniLogin">
+                  <c-col>
+                    <div class="alert alert-primary d-flex align-items-center" role="alert">
+                      <div class="spinner-border spinner-border-sm me-2" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                      <div>
+                        Espere por favor...
+                      </div>
+                    </div>
+                  </c-col>
+                </c-row>
+                
+                <c-row *ngIf="errorLogin">
+                  <c-col>
+                    <div class="alert alert-danger d-flex align-items-center" role="alert">
+                      <i class="fa fa-warning me-2"></i>
+                      <div>
+                        {{messageError}}
+                      </div>
+                    </div>
+                  </c-col>
+                </c-row>
+                                
+
+                <c-row>
+                  <c-col xs="6">
+                    <button cButton class="px-4" color="primary" type="submit" [disabled]="miFormulario.invalid">
+                      Ingresar
+                    </button>
+                  </c-col>
+                  <c-col class="text-right" xs="6">
+                    <button cButton class="px-0" color="link">
+                      ¿Olvidó su Contraseña?
+                    </button>
+                  </c-col>
+                </c-row>
+              </form>
+
+
+            </c-card-body>
+          </c-card>
+        </c-col>
+      </c-row>
+    </c-container>
+  </div> -->
+
+  <body>
+    <main class="form-signin w-100 m-auto text-center">
+      <form
+        [formGroup]="miFormulario"
+        (ngSubmit)="login()">
+
+        <!--<img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">-->
+        <h1 class="h3 mb-3 fw-normal">Sistema de Gestión de Pruebas
+          de Confianza
+        </h1>
+        <div class="linea_celeste_titu"></div>
+        <div>
+          <h5 class="h5">Login
+          </h5>
+          <div class="linea_celeste_ico"></div>
+          <img class="ico" src="../../../../assets/images/icon_login.png" alt="">
+        </div>
+        <div class="form-floating">
+          <input type="email" class="form-control" id="floatingInput" placeholder="user" formControlName="username">
+          <label for="floatingInput">Usuario</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="password" >
+          <label for="floatingPassword">Password</label>
+        </div>
+
+        <!--  -->
+        
+            
+          
+        <!-- <c-row *ngIf="errorLogin">
+          <c-col>
+            <div class="alert alert-danger d-flex align-items-center" role="alert">
+              <i class="fa fa-warning me-2"></i>
+              <div>
+                {{messageError}}
+              </div>
+            </div>
+          </c-col>
+        </c-row> -->
+
+
+        <!-- placeholder="Contraseña"
+          formControlName="username"
+                    type="password"
+                    formControlName="password" -->
+  
+        <!-- <div class="mb-3">
+          <label>
+          </label>
+        </div> -->
+        
+        
+        <div style="min-height: 20px;">
+
+          <div *ngIf="iniLogin">
+            <div class="alert alert-primary d-flex align-items-center" role="alert" style="height: 20px;">
+              <div class="spinner-border spinner-border-sm me-2" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <div>
+                Espere por favor...
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="errorLogin">
+            <div class="alert alert-danger d-flex align-items-center" role="alert" style="height: 20px;">
+              <i class="fa fa-warning me-2"></i>
+              <div>
+                {{messageError}}
+              </div>
+            </div>
+          </div>
+          
+
+          <div class="d-flex align-items-start justify-content-end" style="height: 38px;">
+            <!-- <button type="button" class="btn btn-link" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>"> -->
+            <!-- <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              ¿Olvidó su Contraseña?
+            </button> -->
+            <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              ¿Olvidó su Contraseña?
+            </a>
+          
+          </div>
+
+          <!-- Modal -->
+          <!-- <div class="modal-dialog modal-dialog-centered">
+            ...
+          </div> -->
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+
+                <div class="modal-header" style="height: 45px;">
+                  <h5 class="modal-title" id="exampleModalLabel">¿Olvidó su Contraseña?</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="min-height: 65px;">
+                  <i class="fa fa-circle-info me-2"></i>
+                  Por favor póngase en contacto con el administrador del sistema.
+                </div>
+                <!-- <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+          
+
+          
+        </div>
+
+
+        <!-- <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me" class="fa-mdb"> Remember me
+          </label>
+        </div> -->
+        
+        <button class="w-100 btn btn-primary btn-lg" type="submit" [disabled]="miFormulario.invalid||iniLogin">Ingresar</button>
+  
+      </form>
+    </main>
+  
+  
+    <div class="footer_log text-center">
+      <img class="logo" src="../../../../assets/images/footer_logo_001.png" alt="">
+    </div>
+    
+  </body>
+  
